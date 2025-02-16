@@ -17,6 +17,8 @@
                     {{ name }} 
                     <input type="radio" name="{{ name }}" value="reader"> Reader
                     <input type="radio" name="{{ name }}" value="nonreader"> Nonreader
+                    <!-- Remove Member Button -->
+                    <button type="submit" name="remove_member" value="{{ name }}">Remove</button>
                 </li>
             {% endfor %}
         </ul>
