@@ -36,6 +36,11 @@ def index():
         if new_member and new_member.strip() and new_member not in roster:
             roster.append(new_member.strip())
 
+        # Remove a member if the remove button was clicked
+        remove_member = request.form.get("remove_member")
+        if remove_member and remove_member in roster:
+            roster.remove(remove_member)
+
         attendees = {}
         for name in roster:
             role = request.form.get(name, None)
