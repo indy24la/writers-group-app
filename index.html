@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group App</title>
+</head>
+<body>
+    <h1>Welcome to the Grouping App!</h1>
+    <h2>Roster</h2>
+    <ul>
+        {% for name in roster %}
+            <li>{{ name }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Groups</h2>
+    <ul>
+        {% for group in groups %}
+            <li>
+                <ul>
+                    {% for member in group %}
+                        <li>{{ member }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
